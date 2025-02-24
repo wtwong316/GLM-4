@@ -7,6 +7,7 @@ from collections.abc import Generator
 from client import Client, process_input, process_response
 from conversation import Conversation
 
+
 def format_openai_tool(origin_tools):
     openai_tools = []
     for tool in origin_tools:
@@ -29,6 +30,7 @@ def format_openai_tool(origin_tools):
             }
         openai_tools.append(openai_tool)
     return openai_tools
+
 
 class APIClient(Client):
     def __init__(self, model_path: str):

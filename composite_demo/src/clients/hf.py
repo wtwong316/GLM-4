@@ -22,7 +22,8 @@ class HFClient(Client):
             model_path,
             trust_remote_code=True,
             torch_dtype=torch.bfloat16,
-            device_map="cuda",
+            # device_map="cuda"
+            device_map="cpu",
         ).eval()
 
     def generate_stream(
